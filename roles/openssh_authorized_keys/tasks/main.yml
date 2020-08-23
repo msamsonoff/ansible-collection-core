@@ -1,0 +1,16 @@
+---
+- name: 'check that at least one SSH key is configured'
+  assert:
+    msg: 'msamsonoff_core_openssh_authorized_keys_files: at least one SSH key file is required'
+    that:
+    - msamsonoff_core_openssh_authorized_keys_files is defined
+    - msamsonoff_core_openssh_authorized_keys_files|length >= 1
+
+- name: 'install keys to `~/.ssh/authorized_keys`'
+  authorized_key:
+    user: '{{ ansible_user }}'
+    exclusive: yes
+    key: |
+      {% for file in msamsonoff_core_openssh_authorized_keys_files -%}
+        {{ lookup('file', msamsonoff_core_openssh_authorized_keys_folder + '/' + file) }}
+      {% endfor %}

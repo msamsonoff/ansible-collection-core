@@ -1,0 +1,3 @@
+---
+dependencies:
+- role: 'msamsonoff.core.install_python3'
