@@ -63,12 +63,12 @@ These variables have no effect on other platforms.
 <dl>
   <dt><code>msamsonoff_core_install_python3_openbsd_pkg_path</code></dt>
   <dd>
-    The <code>PKG_PATH</code> environment variable used for the <coe>pkg_add</code> command.
+    This variable sets the <code>PKG_PATH</code> environment variable used for the <code>pkg_add</code> command.
     The default is <code>cdn.openbsd.org</code>.
   </dd>
   <dt><code>msamsonoff_core_install_python3_openbsd_pkg_name</code></dt>
   <dd>
-    The package name used for the <code>pkg_add</code> command.
+    This variable sets the package name used for the <code>pkg_add</code> command.
     The default is <code>python%3.7</code>.
     This prevents <code>pkg_add</code> from failing due to ambiguity.
   </dd>
