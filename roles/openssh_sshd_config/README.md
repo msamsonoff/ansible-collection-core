@@ -82,5 +82,8 @@ It must run before any other plays that connect to the inventory (including befo
 
 <dl>
   <dt><code>msamsonoff_core_openssh_sshd_config_port</code></dt>
-  <dd>The port on which OpenSSH listens. The default is <code>22</code>.</dd>
+  <dd>
+    This variable sets the port on which OpenSSH listens.
+    The default is <code>22</code>.
+  </dd>
 </dl>
