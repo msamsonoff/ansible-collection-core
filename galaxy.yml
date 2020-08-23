@@ -7,7 +7,6 @@ authors:
 description: 'Core Ansible Collection'
 license:
 - 'MIT'
-license_file: 'LICENSE'
 tags:
 dependencies:
 repository: 'https://github.com/msamsonoff/ansible-core'
