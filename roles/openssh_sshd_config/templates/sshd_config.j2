@@ -1,0 +1,21 @@
+{# https://infosec.mozilla.org/guidelines/openssh #}
+{# https://stribika.github.io/2015/01/04/secure-secure-shell.html #}
+Port {{ msamsonoff_core_openssh_sshd_config_port }}
+ListenAddress [::]:{{ msamsonoff_core_openssh_sshd_config_port }}
+ListenAddress 0.0.0.0:{{ msamsonoff_core_openssh_sshd_config_port }}
+PermitRootLogin no
+HostBasedAuthentication no
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+AuthenticationMethods publickey
+{% if msamsonoff_core_openssh_sshd_config_sftp is defined %}
+Subsystem sftp {{ msamsonoff_core_openssh_sshd_config_sftp }}
+{% endif %}

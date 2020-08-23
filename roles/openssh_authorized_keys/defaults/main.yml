@@ -1,0 +1,2 @@
+---
+msamsonoff_core_openssh_authorized_keys_folder: '{{ playbook_dir }}/../ssh'

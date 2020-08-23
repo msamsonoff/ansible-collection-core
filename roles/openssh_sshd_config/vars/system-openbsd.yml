@@ -1,0 +1,2 @@
+---
+msamsonoff_core_openssh_sshd_config_sftp: '/usr/libexec/sftp-server'

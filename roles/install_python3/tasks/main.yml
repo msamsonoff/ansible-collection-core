@@ -1,0 +1,7 @@
+---
+- name: 'install Python version 3'
+  script: '{{ role_path }}/files/install-python3.sh'
+  environment:
+    PKG_PATH: '{{ msamsonoff_core_install_python3_openbsd_pkg_path }}'
+    PYTHON3_OPENBSD_PKG_NAME: '{{ msamsonoff_core_install_python3_openbsd_pkg_name }}'
+  become: yes

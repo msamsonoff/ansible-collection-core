@@ -1,0 +1,21 @@
+---
+- include_vars: 'family-debian.yml'
+  when: |
+    ansible_os_family == 'Debian'
+
+- include_vars: 'family-redhat.yml'
+  when: |
+    ansible_os_family == 'RedHat'
+
+- include_vars: 'system-openbsd.yml'
+  when:
+    ansible_system == 'OpenBSD'
+
+- name: 'configure the `/etc/ssh/sshd_config` file'
+  template:
+    src: 'sshd_config.j2'
+    dest: '/etc/ssh/sshd_config'
+    validate: |
+      sshd -T -f %s
+  become: yes
+  notify: 'reload_sshd'
