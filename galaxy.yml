@@ -1,13 +1,12 @@
 namespace: 'msamsonoff'
 name: 'core'
-version: '1.0.0'
+version: '1.0.1'
 readme: 'README.md'
 authors:
 - Matthew W. Samsonoff <matt.samsonoff@gmail.com>
 description: 'Core Ansible Collection'
 license:
 - 'MIT'
-license_file: 'LICENSE'
 tags:
 dependencies:
 repository: 'https://github.com/msamsonoff/ansible-core'
