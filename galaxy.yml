@@ -9,7 +9,7 @@ license:
 - 'MIT'
 tags:
 dependencies:
-repository: 'https://github.com/msamsonoff/ansible-core'
-documentation: 'https://github.com/msamsonoff/ansible-core/blob/master/README.md'
-homepage: 'https://github.com/msamsonoff/ansible-core'
-issues: 'https://github.com/msamsonoff/ansible-core/issues'
+repository: 'https://github.com/msamsonoff/ansible-collection-core'
+documentation: 'https://github.com/msamsonoff/ansible-collection-core/blob/master/README.md'
+homepage: 'https://github.com/msamsonoff/ansible-collection-core'
+issues: 'https://github.com/msamsonoff/ansible-collection-core/issues'
