@@ -2,7 +2,7 @@
 galaxy_info:
   author: 'msamsonoff'
   description: |
-    This role installs virtualenv for Python 3.
+    This role disables password authentication for OpenSSH.
   license: 'MIT'
   min_ansible_version: 2.9
   platforms:
