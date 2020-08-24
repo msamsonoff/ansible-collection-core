@@ -1,13 +1,16 @@
 ---
-- include_vars: 'family-debian.yml'
+- name: 'include variables for the Debian family'
+  include_vars: 'family-debian.yml'
   when: |
     ansible_os_family == 'Debian'
 
-- include_vars: 'family-redhat.yml'
+- name: 'include variables for the RedHat family'
+  include_vars: 'family-redhat.yml'
   when: |
     ansible_os_family == 'RedHat'
 
-- include_vars: 'system-openbsd.yml'
+- name: 'include variables for OpenBSD'
+  include_vars: 'system-openbsd.yml'
   when:
     ansible_system == 'OpenBSD'
 
