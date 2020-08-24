@@ -1,10 +1,12 @@
 ---
-- listen: 'reload_sshd'
+- name: 'reload sshd'
+  listen: 'reload_sshd'
   service:
     name: 'sshd'
     state: 'reloaded'
   become: yes
 
-- listen: 'reload_sshd'
+- name: 'set the `msamsonoff_core_openssh_sshd_config_port` fact'
+  listen: 'reload_sshd'
   set_fact:
     ansible_port: '{{ msamsonoff_core_openssh_sshd_config_port }}'
